@@ -6,17 +6,13 @@ const { connectToMongoDB } = require("./datasbase");
 const path = require("path");
 
 const app = express();
-/* Middleware for reading the requesst body */
+/* Middleware for reading the request body */
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "build")));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "build/index.html"));
 });
-
-// app.get ("/hello",(req,res)=>{
-//     res.status(200).json({msg:'hello pep'})
-// })
 
 const router = require("./routes");
 

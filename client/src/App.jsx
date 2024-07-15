@@ -95,14 +95,6 @@ const App = () => {
       <h1>Nursing Management System</h1>
       <Box sx={{ width: "80%" }}>
         <DataTable
-          // data={[
-          //   {
-          //     name: "nurse1",
-          //     mobile: "9865321478",
-          //     dob: "12/1/2002",
-          //     age: "20",
-          //   },
-          // ]}
           data={datas}
           handleEdit={handleEdit}
           handleDelete={handleDelete}

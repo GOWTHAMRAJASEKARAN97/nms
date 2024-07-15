@@ -43,11 +43,11 @@ router.put("/datas/:id", async (req, res) => {
   const collection = getCollection();
   const _id = new ObjectId(req.params.id);
   const { datas } = req.body;
-  const updatedTodo = await collection.updateOne(
+  const updatedDatas = await collection.updateOne(
     { _id },
     { $set: { data: datas } }
   );
-  res.status(200).json(updatedTodo);
+  res.status(200).json(updatedDatas);
 });
 
 module.exports = router;
